@@ -1,0 +1,13 @@
+[package]
+name = "bsv-ls"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tower-lsp = "0.20.0"
+tokio = { version = "1.32", features = ["full"] }
+dashmap = "5.5.3"
+tree-sitter = "0.20.10"
+# 注意：你需要一个实际的 tree-sitter-bsv 语法库。
+# 社区中常用的有基于 Verilog 扩展的，这里为了代码能跑通，我们先引入 generic tree-sitter。
+# 实际开发时，你可以替换为真实的 BSV tree-sitter crate 路径。

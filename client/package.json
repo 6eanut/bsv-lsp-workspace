@@ -1,0 +1,43 @@
+{
+  "name": "bsv-lsp-client",
+  "displayName": "BSV Language Server",
+  "description": "Language Server for Bluespec SystemVerilog",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "bsv",
+        "extensions": [
+          ".bsv"
+        ],
+        "aliases": [
+          "Bluespec SystemVerilog",
+          "bsv"
+        ]
+      }
+    ]
+  },
+  "activationEvents": [
+    "onLanguage:bsv"
+  ],
+  "main": "./out/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@types/vscode": "^1.110.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  }
+}
